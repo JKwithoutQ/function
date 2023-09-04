@@ -11,13 +11,13 @@ def sigmoid_grad(x: np.ndarray) -> np.ndarray:
 
 
 if __name__ == '__main__':
-    x = np.linspace(start=-10, stop=10, num=100)
+    x = np.random.randint(0, 20, 10)
     y = softmax(x)
     fig, ax = plt.subplots()
     ax.grid()
     ax.set_title('softmax')
     ax.set_xlabel('x')
     ax.set_ylabel('y')
-    ax.plot(x, y)
+    ax.bar(x, y)
     # plt.show()
-    plt.savefig('softmax.png')
+    plt.savefig('img/softmax.png')
